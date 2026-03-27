@@ -1,0 +1,77 @@
+/* 1. Global Styles - Fun and Readable */
+body {
+    background-color: #f0f9ff; /* Soft sky blue */
+    font-family: 'Quicksand', 'Lexend', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#game-container {
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 0 #bdc3c7; /* "3D" button effect */
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* 2. The Character (Click the Robot) */
+#character-sprite {
+    font-size: 80px;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+/* Animation for when they make a mistake */
+.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px) rotate(-5deg); }
+    50% { transform: translateX(10px) rotate(5deg); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+/* 3. The Text Display */
+#display-text {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* 4. The Big Input Box */
+#typing-input {
+    width: 100%;
+    padding: 15px;
+    font-size: 24px;
+    border: 4px solid #3498db;
+    border-radius: 15px;
+    outline: none;
+    text-align: center;
+    background-color: #fdfefe;
+}
+
+#typing-input:focus {
+    border-color: #2ecc71; /* Turns green when typing */
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.3);
+}
+
+/* 5. Feedback Messages */
+#feedback-message {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #e67e22; /* Friendly orange */
+    height: 30px;
+}
